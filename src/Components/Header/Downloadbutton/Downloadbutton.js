@@ -1,7 +1,8 @@
 import React from 'react';
+import style from './Downloadbutton.module.scss';
 
 const Downloadbutton = (props)=>(
-<button>{props.children}</button>
+<button className={style.button}>{props.children}</button>
 );
 
 

@@ -1,0 +1,16 @@
+@import '../../../assets/styles/Defaults/Defaults.scss';
+.div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div img {
+    width: 60px;
+}
+
+.div p {
+    text-align: end;
+    width: 100%;
+    padding-right: 10px;
+}

@@ -3,7 +3,7 @@ import style from './Headeritem.module.scss';
 
 const Headeritem = (props) =>(
     <li className={style.li}>
-        <a href="#">{props.children}</a>
+        <a href="#" className={props.style}>{props.children}</a>
     </li>
 );
 
