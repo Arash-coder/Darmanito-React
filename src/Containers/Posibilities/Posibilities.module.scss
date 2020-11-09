@@ -1,0 +1,129 @@
+@import '../../assets/styles/Defaults/Defaults.scss';
+.main_title {
+    color: $epiblue;
+    border-right: 4px solid $green;
+    padding-right: 1rem;
+    direction: rtl;
+}
+
+.main {
+    padding: 2rem 7rem;
+}
+
+.mainbody {
+    display: flex;
+    padding-top: 2rem;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+}
+
+.griditem {
+    display: flex;
+    justify-content: center;
+}
+
+.griditem button {
+    width: 100%;
+    padding: 1rem 3rem;
+    box-shadow: 0px 0px 8px #a3daf1;
+    border-radius: 25px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.griditem button:focus {
+    outline: 0;
+}
+
+.griditem button img {
+    width: 100%;
+}
+
+.griditemspeci button {
+    width: 100%;
+    padding: 1rem 2.6rem;
+    box-shadow: 0px 0px 8px #a3daf1;
+    border-radius: 25px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.griditemspeci button img {
+    width: 100%;
+}
+
+.griditemspeci button:focus {
+    outline: 0;
+}
+
+.secondtitle {
+    direction: rtl;
+}
+
+.section {
+    padding-right: 3rem;
+}
+
+.desc {
+    direction: rtl;
+}
+
+.steps {
+    direction: rtl;
+    display: flex;
+    align-items: center;
+}
+
+.stepsp {
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    h3 {
+        padding-right: 1rem;
+    }
+}
+
+.steps h3 {
+    padding-right: 1rem;
+}
+
+.decstep {
+    direction: rtl;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-right: 1px solid black;
+    margin-right: 0.9rem;
+}
+
+.check {
+    width: 5%;
+    background-color: #c7e8f7;
+    border-radius: 87px;
+    padding: 0.5rem;
+}
+
+.down {
+    width: 5%;
+    background-color: $green;
+    border-radius: 87px;
+    padding: 0.5rem;
+}
+
+.lastdesk {
+    direction: rtl;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
