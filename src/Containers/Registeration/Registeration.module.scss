@@ -1,0 +1,69 @@
+@import '../../assets/styles/Defaults/Defaults.scss';
+.container {
+    padding: 3rem 10rem;
+}
+
+.main {
+    display: flex;
+    padding: 3rem;
+    box-shadow: $boxshadow;
+    border-radius: 15px;
+}
+
+.pic {
+    width: 60%;
+}
+
+.text {
+    h1,
+    h3 {
+        direction: rtl;
+    }
+    h1 {
+        color: $epiblue;
+        border-right: 5px solid $green;
+        padding-right: 1rem;
+    }
+}
+
+.input {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    input {
+        width: 70%;
+        border: none;
+        background-color: $placeholder;
+        color: white;
+        direction: rtl;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 0px 15px 15px 0px;
+        font-size: 15px;
+    }
+     ::placeholder {
+        color: white;
+        text-align: center;
+    }
+    input:focus {
+        outline: 0;
+    }
+    button {
+        background-color: $placeholder;
+        border: none;
+        border-radius: 15px 0px 0px 15px;
+        color: white;
+        padding: 0.5rem;
+        cursor: pointer;
+        p {
+            background-color: $blue;
+            padding: 0.5rem;
+            border-radius: 15px;
+        }
+        width: 17%;
+    }
+    button:focus {
+        outline: 0;
+    }
+}
