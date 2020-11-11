@@ -1,0 +1,123 @@
+@import '../../assets/styles/Defaults/Defaults.scss';
+.bluesection {
+    background-color: $blue;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titleblue {
+    display: flex;
+    align-items: center;
+}
+
+.pad1 {
+    padding-right: 1rem;
+    color: white;
+    font-size: $head3;
+}
+
+.pad2 {
+    color: white;
+    font-size: $head1;
+}
+
+.number {
+    background-color: $epiblue;
+    padding: 0.5rem;
+    border-radius: 15px;
+    color: white;
+}
+
+.mainfooter {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 2rem;
+}
+
+.bazzar,
+.sib {
+    display: flex;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    padding: 0.2rem;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnsection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.bazlogo {
+    width: 18%;
+    padding-right: 0.2rem;
+}
+
+.baztext {
+    width: 28%;
+    padding-right: 0.2rem;
+}
+
+.siblogo {
+    width: 20%;
+}
+
+.sibtext {
+    width: 72%;
+}
+
+.btndownload {
+    text-align: center;
+}
+
+.sib {
+    margin-right: 0.5rem;
+}
+
+.uls {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    ul {
+        list-style: none;
+        direction: rtl;
+        li a {
+            text-decoration: none;
+            color: $placeholder;
+        }
+        li {
+            padding-top: 1rem;
+        }
+    }
+}
+
+.ul {
+    margin-right: 1rem;
+}
+
+.links {
+    h4 {
+        direction: rtl;
+        padding-top: 1rem;
+    }
+}
+
+.linkicon {
+    display: flex;
+    justify-content: space-evenly;
+    a i {
+        color: $placeholder;
+        width: 50%;
+        font-size: 170%;
+    }
+    padding-top: 1rem;
+}
