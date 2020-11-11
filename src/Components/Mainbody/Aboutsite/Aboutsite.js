@@ -8,7 +8,8 @@ import low from '../../../assets/images/low-price.PNG';
 import fast from '../../../assets/images/fast-search.PNG';
 
 const Aboutsite = (props)=>(
-    <main className={style.main}>
+    <main className={props.className}>
+        <main className={style.main}>
         <section className={style.section}>
             <h1 className={style.title}>درباره درمانیتو</h1><br/>
             <p>درمانیتو یک سامانه است که امکان سفارش دارو،محصولات آرایشی بهداشتی نوبت گیری و مشاور پزشکان را به راحتی و به صورت آنلاین فراهم کرده است</p>
@@ -40,6 +41,7 @@ const Aboutsite = (props)=>(
             </div>
         </section>
         <img src={about} alt="about"/>
+    </main>
     </main>
 );
 

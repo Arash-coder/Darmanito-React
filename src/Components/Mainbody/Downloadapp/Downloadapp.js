@@ -3,7 +3,8 @@ import style from './Downloadapp.module.scss';
 import doctor from '../../../assets/images/doctor.png';
 
 const Downloadapp = (props)=>(
-    <main className={style.main}>
+    <main className={props.className}>
+        <main className={style.main}>
         <div>
             <img src={doctor} alt="doctor"/>
         </div>
@@ -17,6 +18,7 @@ const Downloadapp = (props)=>(
                 <button className={style.download}>دانلود درمانیتو</button>
             </div>
         </div>
+    </main>
     </main>
 );
 

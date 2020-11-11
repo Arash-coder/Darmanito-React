@@ -22,7 +22,8 @@ class Posibilities extends Component {
     }
     render(){
         return(
-            <main className={style.main}>
+            <main className={this.props.className}>
+                <main className={style.main}>
                 <h1 className={style.main_title}>امکانات درمانیتو</h1>
                 <div className={style.mainbody}>
                 <section className={style.section}>
@@ -72,6 +73,7 @@ class Posibilities extends Component {
                     </div>
                 </div>
             </div>
+            </main>
             </main>
         );
     }
