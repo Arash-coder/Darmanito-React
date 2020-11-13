@@ -1,9 +1,9 @@
 import React , {Component} from 'react';
 import style from './Posibilities.module.scss'; 
-import ear from '../../assets/images/ear.png';
-import market from '../../assets/images/pharmacy.png';
-import pharmacy from '../../assets/images/shop.png';
-import schedule from '../../assets/images/schedule.png';
+import ear from '../../assets/images/ear.svg';
+import market from '../../assets/images/pharmacy.svg';
+import pharmacy from '../../assets/images/market.svg';
+import schedule from '../../assets/images/schedule.svg';
 import svg from '../../assets/images/down.svg';
 import down from '../../assets/images/check.svg';
 

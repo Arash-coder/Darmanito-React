@@ -6,7 +6,7 @@ const Downloadapp = (props)=>(
     <main className={props.className}>
         <main className={style.main}>
         <div>
-            <img src={doctor} alt="doctor"/>
+            <img className={style.doc} src={doctor} alt="doctor"/>
         </div>
         <div className={style.area}>
             <div className={style.txtsection}>

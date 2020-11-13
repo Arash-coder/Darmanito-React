@@ -9,3 +9,83 @@
 .li {
     font-size: $head3;
 }
+
+.li2 {
+    font-size: $head3;
+}
+
+.li:hover {
+    animation-name: animation;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.li2:hover {
+    animation-name: animation;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.burger {
+    display: none;
+    div {
+        width: 32px;
+        height: 3px;
+        background-color: $blue;
+        margin-top: 4px;
+    }
+    cursor: pointer;
+}
+
+.respon {
+    display: flex;
+}
+
+.responsive {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-end;
+    background-color: gray;
+    position: fixed;
+    top: 25%;
+    height: 100vh;
+    padding-right: 2rem;
+    display: none;
+}
+
+.brline {
+    width: 70%;
+    height: 2px;
+    background-color: beige;
+    margin: 0.5rem 0rem;
+}
+
+@keyframes animation {
+    from {
+        opacity: 1;
+        border-bottom: 2px solid $blue;
+    }
+    to {
+        opacity: 1;
+        border-bottom: 2px solid $blue;
+    }
+}
+
+@media(max-width:750px) {
+    .li {
+        display: none;
+    }
+    .donwload {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+@keyframes burger {
+    from {}
+    to {}
+}

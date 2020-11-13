@@ -40,7 +40,7 @@ const Aboutsite = (props)=>(
                 </div>
             </div>
         </section>
-        <img src={about} alt="about"/>
+        <img className={style.about} src={about} alt="about"/>
     </main>
     </main>
 );
