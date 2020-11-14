@@ -17,7 +17,7 @@ class Registeration extends Component{
                         <h3>اگر به عنوان داروخانه یا مرکز درمانی قصد دارید در روند درمان وکسب و کار خودتان تغییری ایجاد کنید درمانیتو منتظر شماست</h3>
                         <br/>
                         <br/>
-                        <br/>
+                        
                         <section className={style.input}>
                             <button><p>بفرست</p></button>
                             <input type="text" placeholder="شماره همراه را وارد کنید"/>
