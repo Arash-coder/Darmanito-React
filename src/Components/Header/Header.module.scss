@@ -7,3 +7,9 @@
         padding: 2rem 2rem;
     }
 }
+
+@media(max-width:768px) {
+    .header {
+        padding: 2rem 0rem;
+    }
+}
