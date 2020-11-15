@@ -12,16 +12,21 @@ class Headeritems extends Component{
             show:false
         }
     }
+
+    navbarhandler=()=>{
+        let attachclassname= [style.responsive,style.open]
+        return attachclassname;
+    }
     
     render(){
         return(
             <ul className={style.ul}>
-                <li className={style.burger}>
+                <li onClick={this.navbarhandler} className={style.burger}>
                     <div className={style.one}></div>
                     <div className={style.two}></div>
                     <div className={style.three}></div>
                 </li>
-                <div className={style.responsive}>
+                <div className={this.attachclassname.join(' ')}>
                 <Headeritem style={style.donwload2}><Downloadbutton >دانلود درمانیتو</Downloadbutton></Headeritem>
                 <div className={style.brline}></div>
                 <Headeritem style={style.li2}>عضویت داروخانه ها</Headeritem>
