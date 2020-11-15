@@ -95,6 +95,26 @@
     }
 }
 
+@media(max-width:767px) {
+    .Lists {
+        top: 24vh;
+        height: 76vh;
+    }
+}
+
+@media(max-width:540px) {
+    .Lists {
+        top: 18vh;
+        height: 82vh;
+    }
+}
+
+// @media(max-width:539px) {
+//     .Lists {
+//         top: 18vh;
+//         height: 82vh;
+//     }
+// }
 @media(max-width:411px) {
     .Lists {
         top: 18vh;
