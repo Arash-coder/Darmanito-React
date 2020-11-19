@@ -1,0 +1,225 @@
+@import '../../assets/styles/Defaults/Defaults.scss';
+// @import "~slick-carousel/slick/slick.css";
+// @import "~slick-carousel/slick/slick-theme.css";
+.blue_section {
+    background-color: $blue;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0rem;
+}
+
+.title {
+    color: $epiblue;
+    direction: rtl;
+    border-right: 3px solid $green;
+    padding-right: 1rem;
+    font-size: $head2;
+    margin-right: 8rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0rem 5rem;
+    margin: 2rem 0rem;
+}
+
+.grid_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &_detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $boxshadow;
+        border-radius: 10px;
+        padding: 2rem 1rem;
+    }
+    p {
+        margin-top: 1rem;
+    }
+}
+
+.pic {
+    img {
+        display: flex;
+        margin: 0 auto;
+        width: 60%;
+    }
+}
+
+.speci {
+    padding: 2rem 2rem;
+}
+
+.speci2 {
+    padding: 2rem 0rem;
+}
+
+.speci3 {
+    padding: 2rem 1.5rem;
+}
+
+.speci4 {
+    padding: 2rem 0.6rem;
+}
+
+.ques {
+    direction: rtl;
+    padding: 2rem 7rem;
+}
+
+.que {
+    display: flex;
+    align-items: center;
+    .plus div {
+        background-color: $blue;
+        width: 35px;
+        height: 3px;
+    }
+    .txte {
+        padding: 1rem;
+        color: $epiblue;
+        font-size: $head3;
+        cursor: pointer;
+    }
+    .pl2 {
+        transform: rotate(90deg) translateX(-2px);
+    }
+}
+
+.answer {
+    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: none;
+}
+
+.show {
+    display: block;
+    animation-name: show;
+    animation-duration: 2s;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.active {
+    animation-name: active;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes active {
+    from {}
+    to {
+        transform: rotate(-90deg) translateX(-55px) translateY(-25px);
+        background-color: $green;
+    }
+}
+
+@media(max-width:858px) {
+    .grid {
+        padding: 0;
+    }
+}
+
+@media(max-width:769px) {
+    .title {
+        margin-right: 1rem;
+    }
+}
+
+@media(max-width:730px) {
+    .grid {
+        grid-template-columns: auto auto;
+        grid-row-gap: 30px;
+        padding: 0rem 5rem;
+    }
+    .ques {
+        padding: 2rem 2rem;
+    }
+}
+
+@media(max-width:502px) {
+    .grid {
+        padding: 0rem 2rem;
+    }
+}
+
+@media(max-width:411px) {
+    .grid {
+        padding: 0rem 1rem;
+    }
+    .ques {
+        padding: 2rem 1rem;
+        .txte {
+            font-size: 15px
+        }
+    }
+}
+
+@media(max-width:375px) {
+    .grid {
+        padding: 0rem 0rem;
+    }
+    .ques {
+        padding: 2rem 1rem;
+        .txte {
+            font-size: 13px
+        }
+    }
+    .title {
+        font-size: 23px;
+    }
+}
+
+@media(max-width:360px) {
+    .grid {
+        padding: 0rem 0rem;
+    }
+    .ques {
+        padding: 2rem 1rem;
+        .txte {
+            font-size: 12px
+        }
+    }
+    .title {
+        font-size: 22px;
+    }
+}
+
+@media(max-width:352px) {
+    .grid {
+        grid-template-columns: auto;
+    }
+    .title {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:280px) {
+    .grid {
+        grid-template-columns: auto;
+    }
+    .ques {
+        padding: 2rem 1rem;
+        .txte {
+            font-size: 10px
+        }
+    }
+    .title {
+        font-size: 15px;
+    }
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/Auxiliary';
 import style from './Lists.module.scss';
+import { Link } from "react-router-dom";
 
 const lists = [
     {name:'صفحه اصلی',active:true},
