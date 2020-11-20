@@ -4,14 +4,22 @@ import style from './Lists.module.scss';
 import { Link } from "react-router-dom";
 
 const lists = [
-    {name:'صفحه اصلی',active:true},
-    {name:'درباره ما',active:false},
-    {name:'تماس با ما',active:false},
-    {name:'عضویت داروخانه ها',active:false}
+    {name:'صفحه اصلی',active:true,to:'/',id:1},
+    {name:'درباره ما',active:false,to:'/FAQ',id:2},
+    {name:'تماس با ما',active:false,id:3},
+    {name:'عضویت داروخانه ها',active:false,id:4}
 ]
 
 
 class Lists extends Component {
+
+    state={
+        value:lists.map(val=>val.active),
+        id:lists.map(id=>id.id)
+    }
+    changevaluehandler=(id)=>{
+        this.setState({value:!this.state.value})
+    }
     render() {
         return (
             <Aux>
@@ -21,11 +29,11 @@ class Lists extends Component {
                         </a>
                 </li>
                 <div className={style.br}></div>
-                {lists.map(key=>(
-                    <li className={[style.li,key.active?style.active:null].join(' ')}>
-                        <a href="#">
+                {lists.map((key)=>(
+                    <li onClick={this.changevaluehandler} id={this.state.id} className={[style.li,key.active?style.active:null].join(' ')}>
+                        <Link to={key.to}>
                             {key.name}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </Aux>
