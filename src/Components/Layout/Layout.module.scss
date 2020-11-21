@@ -1,0 +1,36 @@
+@import '../../assets/styles/Defaults/Defaults.scss';
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    display: none;
+}
+
+.active {
+    display: flex;
+    animation-name: showmodal;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showmodal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.back {
+    background-color: rgb(19, 19, 19);
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    position: fixed;
+    opacity: 0.9;
+}

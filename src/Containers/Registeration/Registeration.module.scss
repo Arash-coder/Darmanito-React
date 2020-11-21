@@ -163,3 +163,13 @@
         padding: 3rem 1rem;
     }
 }
+
+.error {
+    margin: 1rem;
+    direction: rtl;
+    display: none;
+}
+
+.active_error {
+    display: block;
+}

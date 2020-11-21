@@ -216,3 +216,15 @@
                 }
             }
         }
+        
+        .error {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            color: white;
+            font-size: 18px;
+            display: none;
+        }
+        
+        .active_error {
+            display: block;
+        }

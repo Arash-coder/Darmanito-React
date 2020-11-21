@@ -9,6 +9,26 @@ import sibapptext from '../../assets/images/sib app text.svg';
 
 
 class Downloadapp2 extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            imput:' ',
+            err:false
+        }
+    }
+    handleChange=(event)=>{
+        
+        if((event.target.value.length > 11)||(event.target.value.length < 11)||(isNaN(event.target.value))){
+           this.setState({err:true})
+        }else{
+            this.setState({err:false})
+        } 
+        if(event.target.value == null){
+            this.setState({err:false})
+        }
+        
+        
+    }
     render(){
         return(
             <div className={style.main}>
@@ -19,9 +39,17 @@ class Downloadapp2 extends Component {
                     <h1>دانلود اپلیکیشن درمانیتو</h1><br/>
                     <h3>برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید</h3><br/>
                     <div className={style.input}>
-                        <button><p>بفرست</p></button>
-                        <input type="text" placeHolder="شماره همراه را وارد کنید"/>
+                        <button 
+                        onClick={this.state.err? null: this.props.onClick}><p>بفرست</p></button>
+                        <input 
+                        type="text" 
+                        placeHolder="شماره همراه را وارد کنید"
+                        value={this.state.input}
+                        onChange={this.handleChange} />
                     </div>
+                        <div className={[style.error,this.state.err?style.active_error:null].join(' ')}>
+                            لطفا شماره را درست وارد کنید 
+                        </div>
                     <div className={style.btn_section}>
                         <div className={style.btn_item}>
                             <button className={style.sibapp}>
