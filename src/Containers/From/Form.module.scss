@@ -1,0 +1,79 @@
+@import '../../assets/styles/Defaults/Defaults.scss';
+.main {
+    direction: rtl;
+    padding-right: 7rem;
+    .title {
+        display: flex;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .err {
+        color: red;
+        padding-right: 1rem;
+        display: none;
+    }
+    .error {
+        display: block;
+    }
+    .input {
+        width: 80%;
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: 2px solid black;
+    }
+    .input:focus,
+    .input:active {
+        outline: 0;
+        border: 2px solid $blue;
+    }
+    .err_input {
+        border: 2px solid red;
+    }
+    .textarea {
+        resize: none;
+        width: 80%;
+        height: 140px;
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 0.5rem;
+    }
+    .textarea:focus,
+    .textarea:active {
+        outline: 0;
+        border: 2px solid $blue;
+    }
+    .btn {
+        button {
+            width: 80%;
+            font-size: 22px;
+            padding: 0.4rem;
+            border: none;
+            cursor: pointer;
+            background-color: $blue;
+            color: white;
+            border-radius: 5px;
+        }
+        button:focus {
+            outline: 0;
+        }
+    }
+}
+
+@media(max-width:900px) {
+    .main {
+        padding-right: 1.5rem;
+    }
+}
+
+@media(max-width:768px) {
+    .main {
+        margin-top: 2rem;
+        padding-right: 6rem;
+    }
+}
+
+@media(max-width:411px) {
+    .main {
+        padding-right: 3rem;
+    }
+}

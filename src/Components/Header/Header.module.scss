@@ -74,9 +74,10 @@
         background-color: rgb(219, 219, 219);
         width: 100%;
         transition: all 0.5s ease;
-        opacity: 0;
         padding-right: 3rem;
         padding-bottom: 1rem;
+        display: none;
+        z-index: 1;
     }
     .burger {
         display: block;
@@ -85,7 +86,20 @@
 
 .open {
     // transform: translateX(0%)
-    opacity: 1;
+    opacity: 0;
+    display: flex;
+    animation-name: opennav;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opennav {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media(max-width:768px) {

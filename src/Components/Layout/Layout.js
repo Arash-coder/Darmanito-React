@@ -8,6 +8,8 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import style from './Layout.module.scss';
 import Modal from '../../Containers/UI/Modals/Modal';
 import Back from '../../Containers/UI/Back/Back';
+import Contact_us from '../Contact_us/Contact_us';
+
 
 const Layout = (props) =>{
     const [show,setshow]=useState(false);
@@ -23,6 +25,7 @@ const Layout = (props) =>{
             <Mainbody onClick={()=>setshow(!show)} />
         </Route>
         <Route path='/FAQ' component={Faq} />
+        <Route path='/Contact_us' component={Contact_us} />
         
         <Footer />
     </Router >

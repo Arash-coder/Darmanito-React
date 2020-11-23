@@ -1,0 +1,93 @@
+@import '../../assets/styles/Defaults/Defaults.scss';
+.main {
+    padding: 2rem 0rem;
+}
+
+.title {
+    color: white;
+    background-color: $blue;
+    margin: 1rem 0rem;
+    text-align: center;
+    padding: 1rem 0rem;
+    font-size: $head1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 0rem;
+    .grid_item {
+        width: 100%;
+    }
+}
+
+.map {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.info {
+    div {
+        direction: rtl;
+    }
+    display: flex;
+    width: 73%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 100px;
+    .info1 {
+        width: 43%;
+        padding-right: 2rem;
+    }
+    box-shadow:0px 0px 5px black;
+    border-radius: 5px;
+}
+
+.blue {
+    color: $blue;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+@media(max-width:1000px) {
+    .info {
+        width: 80%;
+    }
+    .map {
+        width: 99%;
+    }
+}
+
+@media(max-width:770px) {
+    .info {
+        width: 85%;
+    }
+}
+
+@media(max-width:768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .info {
+        width: 70%;
+        bottom: 60px;
+    }
+    .map {
+        width: 90%;
+    }
+}
+
+@media(max-width:411px) {
+    .info {
+        width: 80%;
+        bottom: 40px;
+        .info1 {
+            padding-right: 1rem;
+        }
+    }
+}

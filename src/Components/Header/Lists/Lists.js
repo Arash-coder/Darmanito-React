@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const lists = [
     {name:'صفحه اصلی',active:true,to:'/',id:1},
     {name:'درباره ما',active:false,to:'/FAQ',id:2},
-    {name:'تماس با ما',active:false,id:3},
+    {name:'تماس با ما',active:false,to:'/Contact_us',id:3},
     {name:'عضویت داروخانه ها',active:false,id:4}
 ]
 
