@@ -63,10 +63,10 @@ class Form extends Component{
                     </div>
                     <input onChange={this.nameinputhandler}  className={[style.input,this.state.show1?style.err_input:style.input].join(' ')} type="text" placeholder="نام و نام خانوادگی"/>
                     <div className={style.title}>
-                        <h4>ایمیل یا شماره همراه</h4>
+                        <h4>ایمیل</h4>
                         <h4 className={[style.err,this.state.show2?style.error:style.err].join(' ')}>ایمیل وارد شده معتبر نمی باشد!</h4>
                     </div>
-                    <input onChange={this.emailinputhandler}   className={[style.input,this.state.show2?style.err_input:style.input].join(' ')} type="text" placeholder="ایمیل یا شماره همراه"/>
+                    <input onChange={this.emailinputhandler}   className={[style.input,this.state.show2?style.err_input:style.input].join(' ')} type="text" placeholder="ایمیل"/>
                     <h4 className={style.title}>پیام شما</h4>
                     <textarea className={style.textarea} placeholder="پیام شما"></textarea>
                     <div className={style.btn}>

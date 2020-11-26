@@ -1,0 +1,37 @@
+@import '../../../assets/styles/Defaults/Defaults.scss';
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: $boxshadow;
+    border-radius: 10px;
+    .miner_title {
+        direction: rtl;
+        color: $epiblue;
+        align-self: flex-end;
+    }
+    .miner_desc {
+        direction: rtl;
+    }
+    .btn {
+        color: white;
+        background-color: $blue;
+        padding: 0.5rem;
+        border: none;
+        cursor: pointer;
+        margin-top: 1rem;
+        font-size: 20px;
+        width: 55%;
+        border-radius: 7px;
+    }
+    .btn:focus {
+        outline: 0;
+    }
+}
+
+.box {
+    margin: 3rem 0rem;
+}

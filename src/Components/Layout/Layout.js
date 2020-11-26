@@ -9,6 +9,7 @@ import style from './Layout.module.scss';
 import Modal from '../../Containers/UI/Modals/Modal';
 import Back from '../../Containers/UI/Back/Back';
 import Contact_us from '../Contact_us/Contact_us';
+import Pharmacy_Registeration from '../../Containers/Pharmacy_Registeration/Pharmacy_Registeration';
 
 
 const Layout = (props) =>{
@@ -26,6 +27,7 @@ const Layout = (props) =>{
         </Route>
         <Route path='/FAQ' component={Faq} />
         <Route path='/Contact_us' component={Contact_us} />
+        <Route path='/Registeration' component={Pharmacy_Registeration} />
         
         <Footer />
     </Router >

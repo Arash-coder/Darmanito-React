@@ -7,7 +7,7 @@ const lists = [
     {name:'صفحه اصلی',active:true,to:'/',id:1},
     {name:'درباره ما',active:false,to:'/FAQ',id:2},
     {name:'تماس با ما',active:false,to:'/Contact_us',id:3},
-    {name:'عضویت داروخانه ها',active:false,id:4}
+    {name:'عضویت داروخانه ها',active:false,to:'./Registeration',id:4}
 ]
 
 

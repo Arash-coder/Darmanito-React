@@ -1,0 +1,35 @@
+@import '../../../assets/styles/Defaults/Defaults.scss';
+.label {
+    box-shadow: $boxshadow;
+    display: flex;
+    .adress {
+        display: flex;
+        i {
+            color: $green;
+        }
+    }
+    .name_phar {
+        direction: rtl;
+        padding-right: 0.7rem;
+    }
+    width:68%;
+    justify-content: center;
+    padding:1rem 0rem;
+    margin: 0 auto;
+    border-radius:10px;
+    .pic {
+        padding: 1rem;
+        background-color: #1894ff;
+        border-radius: 70%;
+        display: flex;
+    }
+    .time {
+        background-color: $blue;
+        color: white;
+        display: flex;
+        align-items: flex-start;
+        height: 10%;
+        padding: 0.3rem;
+        border-radius: 5px;
+    }
+}
