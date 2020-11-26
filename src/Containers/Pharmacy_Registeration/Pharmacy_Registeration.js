@@ -12,7 +12,7 @@ class Pharmacy_Registeration extends Component {
         return (
             <main className={style.main}>
                 <div className={style.grid}>
-                    <div>
+                    <div className={style.labels}>
                         <Label />
                         <Label className={style.label} />
                         <Label className={style.label2} />

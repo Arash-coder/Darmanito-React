@@ -35,3 +35,9 @@
 .box {
     margin: 3rem 0rem;
 }
+
+@media(max-width:1000px) {
+    .main {
+        width: 78%;
+    }
+}
