@@ -1,5 +1,6 @@
 import React ,{Component} from 'react';
 import style from './Choose_register.module.scss';
+import { Link } from "react-router-dom";
 
 
 class Choose_register extends Component{
@@ -16,7 +17,9 @@ class Choose_register extends Component{
                     <div className={style.miner_desc}>
                         <h4>{this.props.miner_desc}</h4>
                     </div>
-                    <button className={style.btn}>ثبت نام</button>
+                    <button className={style.btn}>
+                        <Link to="/Form">ثبت نام</Link>
+                    </button>
                 </div>
             </main>
         )

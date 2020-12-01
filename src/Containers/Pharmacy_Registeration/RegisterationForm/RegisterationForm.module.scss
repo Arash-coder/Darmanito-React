@@ -1,0 +1,166 @@
+@import '../../../assets/styles/Defaults/Defaults.scss';
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0rem 17rem;
+    margin-top: 1rem;
+    direction: rtl;
+    .grid_item {
+        direction: rtl;
+    }
+    .input {
+        padding-top: 0.5rem;
+        input {
+            padding: 0.4rem;
+            border: 2px solid black;
+            border-radius: 7px;
+            width: 80%;
+        }
+        input:focus {
+            outline: 0;
+            border: 2px solid $blue;
+        }
+        select {
+            padding: 0.4rem;
+            border: 2px solid black;
+            border-radius: 7px;
+            width: 80%;
+        }
+        select:focus {
+            outline: 0;
+            border: 2px solid $blue;
+        }
+    }
+    .title {
+        display: flex;
+        .err {
+            color: red;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.span {
+    color: $blue;
+}
+
+.ad {
+    direction: rtl;
+    padding: 1rem 17rem;
+    input {
+        width: 90%;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        border: 2px solid black;
+        border-radius: 7px;
+    }
+    input:focus {
+        outline: 0;
+        border: 2px solid $blue;
+    }
+    .title1 {
+        display: flex;
+        .err {
+            color: red;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+    padding: 0rem 17rem;
+    direction: rtl;
+}
+
+.time {
+    display: flex;
+    margin-top: 1rem;
+    .time_item {
+        display: flex;
+        align-items: center;
+        border: 1px solid $blue;
+        padding: 0.5rem;
+        border-radius: 7px;
+    }
+    .left {
+        margin-right: 1rem;
+    }
+}
+
+.set_item {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    input {
+        padding: 0.4rem;
+        border: 1px solid black;
+        border-radius: 7px;
+    }
+    input:focus {
+        outline: 0;
+        border: 1px solid $blue;
+    }
+}
+
+.lastone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+    margin-top: 2rem;
+    padding: 1rem 17rem;
+}
+
+.confirm {
+    color: white;
+    padding: 0.6rem;
+    background-color: $blue;
+    border-radius: 7px;
+    border: none;
+    width: 40%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    cursor: pointer;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    text-decoration: none;
+    color: white;
+}
+
+.confirm:focus {
+    outline: 0;
+}
+
+.speci {
+    direction: ltr;
+}
+
+.upload::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.upload::before {
+    content: 'آپلود عکس';
+    border: 1px solid $blue;
+    padding: 0.5rem;
+    color: $blue;
+    cursor: pointer;
+}
+
+.upload {
+    padding: 1rem;
+}
+
+.err {
+    color: red;
+    margin-right: 1rem;
+}
+
+.title4 {
+    display: flex;
+}

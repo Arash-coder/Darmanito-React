@@ -10,6 +10,7 @@ import Modal from '../../Containers/UI/Modals/Modal';
 import Back from '../../Containers/UI/Back/Back';
 import Contact_us from '../Contact_us/Contact_us';
 import Pharmacy_Registeration from '../../Containers/Pharmacy_Registeration/Pharmacy_Registeration';
+import Form from '../../Containers/Pharmacy_Registeration/RegisterationForm/RegisterationForm';
 
 
 const Layout = (props) =>{
@@ -22,6 +23,7 @@ const Layout = (props) =>{
         <Back className={show?style.back:null} />
         <Modal onClick={()=>setshow(!show)} className={[style.main,show?style.active:null].join(' ')} />
         <Header />
+        <Route path='/Form' component={Form} />
         <Route path='/' exact>
             <Mainbody onClick={()=>setshow(!show)} />
         </Route>
