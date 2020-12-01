@@ -4,7 +4,9 @@ import style from './Confirm.module.scss';
 import pic from '../../../../assets/images/bazzar logo.svg';
 
 
+
 const Confrim = (props) => {
+    
     return (
 
         <main className={style.main}>
@@ -12,7 +14,7 @@ const Confrim = (props) => {
                 <div>
                     <img src={pic} alt="image" />
                 </div>
-                <div className={style.title}>
+                <div className={style.title_confirm}>
                     <h4>نام داروخانه</h4>
                     <h3>فلان داروخانه</h3>
                 </div>
@@ -54,7 +56,7 @@ const Confrim = (props) => {
                 </div>
             </div>
             <div className={style.fifth}>
-                <button className={style.change}>ویرایش اطلاعات</button>
+                <button type="submit" className={style.change}>ویرایش اطلاعات</button>
                 <button className={style.confrim}>تکمیل ثبت نام</button>
             </div>
         </main>

@@ -159,8 +159,72 @@
 .err {
     color: red;
     margin-right: 1rem;
+    display: none;
+}
+
+.err_active {
+    display: block;
 }
 
 .title4 {
     display: flex;
+}
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.main {
+    padding: 0rem 12rem;
+    margin-top: 2rem;
+    .first {
+        display: flex;
+        direction: rtl;
+        .title_confirm {
+            margin-right: 2rem;
+        }
+    }
+    .second {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        direction: rtl;
+        margin-top: 2rem;
+    }
+    .third {
+        direction: rtl;
+        margin-top: 2rem;
+        h3 {
+            margin-top: 1rem;
+        }
+    }
+    .fourth {
+        display: flex;
+        direction: rtl;
+        margin-top: 2rem;
+        .fourth_item {
+            direction: rtl;
+        }
+        .right {
+            margin-right: 2rem;
+        }
+    }
+    .fifth {
+        direction: rtl;
+        .change {
+            color: $blue;
+            background-color: white;
+            border: 2px solid $blue;
+            padding: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .confrim {
+            margin-right: 2rem;
+            background-color: $blue;
+            border: none;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            border: 2px solid $blue;
+            cursor: pointer;
+        }
+        margin:2rem 0rem;
+    }
 }
