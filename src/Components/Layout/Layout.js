@@ -11,6 +11,7 @@ import Back from '../../Containers/UI/Back/Back';
 import Contact_us from '../Contact_us/Contact_us';
 import Pharmacy_Registeration from '../../Containers/Pharmacy_Registeration/Pharmacy_Registeration';
 import Form from '../../Containers/Pharmacy_Registeration/RegisterationForm/RegisterationForm';
+import Confirm from '../../Containers/Pharmacy_Registeration/RegisterationForm/Confirm/Confirm';
 
 
 const Layout = (props) =>{
@@ -24,6 +25,7 @@ const Layout = (props) =>{
         <Modal onClick={()=>setshow(!show)} className={[style.main,show?style.active:null].join(' ')} />
         <Header />
         <Route path='/Form' component={Form} />
+        <Route path='/Confirm' component={Confirm} />
         <Route path='/' exact>
             <Mainbody onClick={()=>setshow(!show)} />
         </Route>
