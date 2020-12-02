@@ -27,7 +27,9 @@ const Layout = (props) =>{
         <Header />
     
             
-                <Route path="/Form" component={Form} />
+                <Route path="/Form">
+                    <Form clicked={()=>setshow(!show)} />
+                </Route>
                 {/* <Route path='/Confirm' component={Confirm} /> */}
 
             

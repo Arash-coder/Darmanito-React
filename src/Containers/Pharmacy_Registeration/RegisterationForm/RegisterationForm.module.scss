@@ -170,13 +170,21 @@
     display: flex;
 }
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.set_timer {
+    display: none;
+}
+
+.set_timer_active {
+    display: block;
+} //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .main {
     padding: 0rem 12rem;
     margin-top: 2rem;
+    display: none;
     .first {
         display: flex;
         direction: rtl;
+        align-items: center;
         .title_confirm {
             margin-right: 2rem;
         }
@@ -226,5 +234,108 @@
             cursor: pointer;
         }
         margin:2rem 0rem;
+    }
+}
+
+.image {
+    width: 148px;
+    height: 155px;
+    border-radius: 100px;
+    padding: 1rem;
+}
+
+.show1 {
+    display: none;
+}
+
+.main_active {
+    display: block;
+}
+
+@media(max-width:1014px) {
+    .grid {
+        padding: 0rem 9rem;
+    }
+    .ad {
+        padding: 0rem 9rem;
+    }
+    .lastone {
+        padding: 0rem 9rem;
+    }
+    .grid2 {
+        padding: 0rem 9rem;
+    }
+}
+
+@media(max-width:962px) {
+    .main {
+        padding: 0rem 6rem;
+    }
+}
+
+@media(max-width: 758px) {
+    .grid {
+        padding: 0rem 4rem;
+    }
+    .ad {
+        padding: 0rem 4rem;
+    }
+    .lastone {
+        padding: 0rem 4rem;
+    }
+    .grid2 {
+        padding: 0rem 4rem;
+    }
+    .main {
+        padding: 0rem 4rem;
+        .second {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+@media(max-width:610px) {
+    .grid {
+        padding: 0rem 2rem;
+    }
+    .ad {
+        padding: 0rem 2rem;
+    }
+    .lastone {
+        padding: 0rem 2rem;
+    }
+    .grid2 {
+        padding: 0rem 2rem;
+    }
+    .main {
+        padding: 0rem 2rem;
+    }
+}
+
+@media(max-width:536px) {
+    .grid {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .ad {
+        padding: 1rem 2rem;
+    }
+    .lastone {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        padding: 1rem 2rem;
+    }
+    .grid2 {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .main {
+        padding: 0rem 1rem;
+    }
+}
+
+@media(max-width:290px) {
+    .main {
+        padding: 0rem 0.2rem;
     }
 }

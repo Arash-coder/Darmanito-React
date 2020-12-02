@@ -10,14 +10,24 @@ class RegisterationForm extends Component {
         this.state = {
             input1: true,
             input1_2: true,
+            input1_txt: null,
             input2: true,
+            input2_txt: null,
             input3: true,
             input3_2: true,
             input3_txt: null,
-            input4: null,
+            input4: true,
+            input4_txt: null,
             input5: null,
             input6: null,
-            input7: null,
+            input7: true,
+            input7_txt: null,
+            daily: false,
+            always: null,
+            time: null,
+            pic: null,
+            show1: true,
+            show2: false
 
         }
     }
@@ -31,6 +41,7 @@ class RegisterationForm extends Component {
         else {
             this.setState({ input1_2: true, input1: true })
         }
+        this.setState({ input1_txt: event.target.value })
     }
     input2handler = (event) => {
         if (isNaN(event.target.value)) {
@@ -38,6 +49,7 @@ class RegisterationForm extends Component {
         } else {
             this.setState({ input2: true })
         }
+        this.setState({ input2_txt: event.target.value })
     }
     input3handler = (event) => {
         if (event.target.value.length < 4) {
@@ -50,12 +62,51 @@ class RegisterationForm extends Component {
         else {
             this.setState({ input3_2: true, input3: true })
         }
-        this.setState({input3_txt:event.target.value})
+        this.setState({ input3_txt: event.target.value })
+    }
+    input4handler = (event) => {
+        if (isNaN(event.target.value)) {
+            this.setState({ input4: false })
+        } else {
+            this.setState({ input4: true })
+        }
+        this.setState({ input4_txt: event.target.value })
+    }
+    input7handler = (event) => {
+        if (!isNaN(event.target.value)) {
+            this.setState({ input7: false })
+        }
+        else {
+            this.setState({ input7: true })
+        }
+        this.setState({ input7_txt: event.target.value })
+    }
+    dailyhandler = () => {
+        this.setState({ daily: !this.state.daily })
+        this.setState({ time: "روزانه" })
+    }
+    alwayshandler = () => {
+        this.setState({ daily: false })
+        this.setState({ time: "شبانه روزی" })
+    }
+    pichandler = (event) => {
+        this.setState({
+            pic: URL.createObjectURL(event.target.files[0])
+        })
+    }
+    show1handler = (event) => {
+        this.setState({ show1: false })
+        this.setState({ show2: true })
+        event.preventDefault();
+    }
+    show2handler = () => {
+        this.setState({show1:true})
+        this.setState({show2:false})
     }
     render() {
         return (
             <div>
-                <main>
+                <main className={this.state.show1 ? null : style.show1}>
                     <form>
                         <div className={style.grid}>
                             <div className={style.grid_item}>
@@ -98,9 +149,10 @@ class RegisterationForm extends Component {
                                     <div className={style.title}>
                                         <h4>شماره داروخانه</h4>
                                         {/* {errors.number_of_pharmacy && <h4 className={style.err}>فیلد اجباری است!</h4>} */}
+                                        <h4 className={[style.err, this.state.input4 ? null : style.err_active].join(' ')}>فیلد اجباری است!</h4>
                                     </div>
                                     <div className={style.input}>
-                                        <input type="text" name="number_of_pharmacy" />
+                                        <input onChange={this.input4handler} type="text" name="number_of_pharmacy" />
                                     </div>
                                 </div>
                             </div>
@@ -137,8 +189,9 @@ class RegisterationForm extends Component {
                             <div className={style.title1}>
                                 <h4>آدرس دقیق</h4>
                                 {/* {errors.address && <h4 className={style.err}>فیلد اجباری است!</h4>} */}
+                                <h4 className={[style.err, this.state.input7 ? null : style.err_active].join(' ')}></h4>
                             </div>
-                            <input type="text" name="address" />
+                            <input onChange={this.input7handler} type="text" name="address" />
                         </div>
                         <div className={style.grid2}>
                             <div>
@@ -148,15 +201,15 @@ class RegisterationForm extends Component {
                                 <div className={style.time}>
                                     <div className={style.time_item}>
                                         <h5>روزانه</h5>
-                                        <input type="checkbox" name="daily" />
+                                        <input onClick={this.dailyhandler} type="checkbox" name="daily" />
                                     </div>
                                     <div className={[style.time_item, style.left].join(' ')}>
                                         <h5>شبانه روزی</h5>
-                                        <input type="checkbox" name="always" />
+                                        <input onClick={this.alwayshandler} type="checkbox" name="always" />
                                     </div>
                                 </div>
                             </div>
-                            <div className={style.set_timer}>
+                            <div className={[style.set_timer, this.state.daily ? style.set_timer_active : null].join(' ')}>
                                 <div className={style.title4}>
                                     <h4>ساعات کاری</h4>
                                     {/* {errors.time1 && <h4 className={style.err}>فیلد اجباری است !</h4>} */}
@@ -173,11 +226,11 @@ class RegisterationForm extends Component {
                         <div className={style.lastone}>
                             <div>
 
-                                <input type="file" name="file" id="file" className={style.upload} />
+                                <input onChange={this.pichandler} type="file" name="file" id="file" className={style.upload} />
                             </div>
                             <div className={style.speci}>
 
-                                <button type="submit" className={style.confirm}>تایید</button>
+                                <button onClick={this.show1handler} className={style.confirm}>مرحله بعد</button>
 
                             </div>
                         </div>
@@ -186,10 +239,10 @@ class RegisterationForm extends Component {
 
                 {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
 
-                <main className={style.main}>
+                <main className={[style.main, this.state.show2 ? style.main_active : null].join(' ')}>
                     <div className={style.first}>
                         <div>
-                            {/* <img src={pic} alt="image" /> */}
+                            <img className={style.image} src={this.state.pic} alt="image" />
                         </div>
                         <div className={style.title_confirm}>
                             <h4>نام داروخانه</h4>
@@ -199,11 +252,11 @@ class RegisterationForm extends Component {
                     <div className={style.second}>
                         <div className={style.second_item}>
                             <h4>نام داروخانه</h4>
-                            <h3>فلان داروخانه</h3>
+                            <h3> {this.state.input3_txt} </h3>
                         </div>
                         <div className={style.second_item}>
                             <h4>شماره داروخانه</h4>
-                            <h3>021-34434434</h3>
+                            <h3> {this.state.input4_txt} </h3>
                         </div>
                         <div className={style.second_item}>
                             <h4>شهر</h4>
@@ -211,30 +264,30 @@ class RegisterationForm extends Component {
                         </div>
                         <div className={style.second_item}>
                             <h4>منطقه</h4>
-                            <h3>فلان منطقه</h3>
+                            <h3>منطقه 1</h3>
                         </div>
                         <div className={style.second_item}>
                             <h4>ساعت کاری</h4>
-                            <h3>شبانه روزی</h3>
+                            <h3> {this.state.time} </h3>
                         </div>
                     </div>
                     <div className={style.third}>
                         <h4>آدرس دقیق</h4>
-                        <h3>تهران و فلان فلان فبل فبلن منبیتسبنمت</h3>
+                        <h3> {this.state.input7_txt} </h3>
                     </div>
                     <div className={style.fourth}>
                         <div className={style.fourth_item}>
                             <h4>نام و نام خانوادگی موسس</h4>
-                            <h3>آرش</h3>
+                            <h3> {this.state.input1_txt} </h3>
                         </div>
                         <div className={[style.fourth_item, style.right].join(' ')}>
                             <h4>شماره نظام پزشکی</h4>
-                            <h3>1234-ل</h3>
+                            <h3> {this.state.input2_txt} </h3>
                         </div>
                     </div>
                     <div className={style.fifth}>
-                        <button type="submit" className={style.change}>ویرایش اطلاعات</button>
-                        <button className={style.confrim}>تکمیل ثبت نام</button>
+                        <button onClick={this.show2handler} type="submit" className={style.change}>ویرایش اطلاعات</button>
+                        <button onClick={this.props.clicked} className={style.confrim}>تکمیل ثبت نام</button>
                     </div>
                 </main>
             </div>
