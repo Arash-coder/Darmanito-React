@@ -33,33 +33,33 @@
     input {
         width: 70%;
         border: none;
-        background-color: $placeholder;
-        color: white;
+        background-color: rgb(219, 219, 219);
+        color: black;
         direction: rtl;
         padding-right: 1rem;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
-        border-radius: 0px 15px 15px 0px;
+        border-radius: 0px 7px 7px 0px;
         font-size: 15px;
     }
      ::placeholder {
-        color: white;
+        color: black;
         text-align: center;
     }
     input:focus {
         outline: 0;
     }
     button {
-        background-color: $placeholder;
+        background-color: rgb(219, 219, 219);
         border: none;
-        border-radius: 15px 0px 0px 15px;
+        border-radius: 7px 0px 0px 7px;
         color: white;
         padding: 0.5rem;
         cursor: pointer;
         p {
             background-color: $blue;
             padding: 0.5rem;
-            border-radius: 15px;
+            border-radius: 7px;
         }
         width: 17%;
     }

@@ -119,6 +119,9 @@
         width: 50%;
         font-size: 170%;
     }
+    a.active {
+        color: $blue;
+    }
     padding-top: 1rem;
 }
 
@@ -166,4 +169,8 @@
     .pad1 {
         font-size: $body2;
     }
+}
+
+.active {
+    color: $blue;
 }

@@ -1,40 +1,42 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/Auxiliary';
 import style from './Lists.module.scss';
-import { Link } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 const lists = [
-    {name:'صفحه اصلی',active:true,to:'/',id:1},
-    {name:'درباره ما',active:false,to:'/FAQ',id:2},
-    {name:'تماس با ما',active:false,to:'/Contact_us',id:3},
-    {name:'عضویت داروخانه ها',active:false,to:'./Registeration',id:4}
+    {name:'صفحه اصلی',to:'/'},
+    {name:'درباره ما',to:'/FAQ'},
+    {name:'تماس با ما',to:'/Contact_us'},
+    {name:'عضویت داروخانه ها',to:'./Registeration'}
 ]
 
 
 class Lists extends Component {
 
-    state={
-        value:lists.map(val=>val.active),
-        id:lists.map(id=>id.id)
-    }
-    changevaluehandler=(id)=>{
-        this.setState({value:!this.state.value})
-    }
+    
     render() {
         return (
             <Aux>
-                <li>
+                <li className={style.none}>
                         <a className={style.btn} href="#">
                             دانلود درمانیتو
                         </a>
                 </li>
                 <div className={style.br}></div>
                 {lists.map((key)=>(
-                    <li onClick={this.changevaluehandler} id={this.state.id} className={[style.li,key.active?style.active:null].join(' ')}>
-                        <Link to={key.to}>
-                            {key.name}
-                        </Link>
-                    </li>
+                    // <li className={style.li}>
+                    //     <NavLink to={key.to}>
+                    //         {key.name}
+                    //     </NavLink>
+                    // </li>
+                    <NavLink className={style.li} to={key.to} activeStyle={
+                        {
+                            borderBottom: "2px solid #1894ff",
+                            color: "#1894ff"
+                        }
+                    }>
+                        {key.name}
+                    </NavLink>
                 ))}
             </Aux>
         );

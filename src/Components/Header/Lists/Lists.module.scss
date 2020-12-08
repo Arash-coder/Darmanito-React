@@ -1,63 +1,70 @@
-@import '../../../assets/styles/Defaults/Defaults.scss';
-.li {
-    direction: rtl;
-    a {
+    @import '../../../assets/styles/Defaults/Defaults.scss';
+    .active:active {
+        border-bottom: 2px solid $blue;
+        color: $blue;
+    }
+    
+    .li {
+        direction: rtl;
         text-decoration: none;
         font-size: $head3;
         color: black;
     }
-}
-
-.active {
-    border-bottom: 2px solid $blue;
-    a {
-        color: $blue;
+    
+    // .active {
+    //     border-bottom: 2px solid $blue;
+    //     color: $blue;
+    // }
+    .li:hover {
+        border-bottom: 2px solid $blue;
     }
-}
-
-.li:hover {
-    border-bottom: 2px solid $blue;
-}
-
-.btn {
-    text-decoration: none;
-    color: $blue;
-    font-size: $head3;
-    font-weight: 800;
-    background-color: #E6F3FF;
-    padding: 0.5rem 1.5rem;
-    border-radius: 9px;
-    display: none;
-    margin-top: 0.5rem;
-}
-
-.br {
-    width: 90%;
-    height: 2px;
-    background-color: black;
-    display: none;
-}
-
-@media(max-width:775px) {
+    
+    .none {
+        display: none;
+    }
+    
     .btn {
-        display: block;
+        text-decoration: none;
+        color: $blue;
+        font-size: $head3;
+        font-weight: 800;
+        background-color: #E6F3FF;
+        padding: 0.5rem 1.5rem;
+        border-radius: 9px;
+        display: none;
+        margin-top: 0.5rem;
     }
-    .active {
-        border-bottom: none;
-        border-right: 3px solid $blue;
-        padding-right: 0.2rem;
-        a {
-            color: $blue;
+    
+    .br {
+        width: 90%;
+        height: 2px;
+        background-color: black;
+        display: none;
+    }
+    
+    @media(max-width:775px) {
+        .btn {
+            display: block;
+        }
+        .none {
+            display: block;
+        }
+        .active {
+            border-bottom: none;
+            border-right: 3px solid $blue;
+            padding-right: 0.2rem;
+            a {
+                color: $blue;
+            }
+        }
+        .br {
+            display: block;
+        }
+        .li:hover {
+            border-bottom: none;
+            border-right: 3px solid $blue;
+        }
+        .li {
+            padding-right: 0.4rem;
         }
     }
-    .br {
-        display: block;
-    }
-    .li:hover {
-        border-bottom: none;
-        border-right: 3px solid $blue;
-    }
-    .li {
-        padding-right: 0.4rem;
-    }
-}

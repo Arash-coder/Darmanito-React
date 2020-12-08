@@ -17,7 +17,7 @@ class Pharmacy_Registeration extends Component {
                         <Label className={style.label} />
                         <Label className={style.label2} />
                     </div>
-                    <div>
+                    <div className={style.padding}>
                         <div>
                             <h1 className={style.title}>شما هم در سلامت و بهبود مردم کشورمون موثر باشید</h1>
                             <h3 className={style.desc}>با ثبت نام به عنوان داروخانه یا فروشگاه و داروخانه شماهم به سیستم درمان کمک کنید و به هزاران کاربر خدمات ارئه بدین و روزانه درآمد سفارش های خودتون رو تسویه کنید</h3>

@@ -19,28 +19,28 @@
         width: 80%;
         padding: 0.5rem;
         border-radius: 5px;
-        border: 2px solid black;
+        border: 1px solid rgb(197, 197, 197);
     }
     .input:focus,
     .input:active {
         outline: 0;
-        border: 2px solid $blue;
+        border: 1px solid $blue;
     }
     .err_input {
-        border: 2px solid red;
+        border: 1px solid red;
     }
     .textarea {
         resize: none;
         width: 80%;
         height: 140px;
         border-radius: 5px;
-        border: 2px solid black;
+        border: 1px solid rgb(197, 197, 197);
         padding: 0.5rem;
     }
     .textarea:focus,
     .textarea:active {
         outline: 0;
-        border: 2px solid $blue;
+        border: 1px solid $blue;
     }
     .btn {
         button {

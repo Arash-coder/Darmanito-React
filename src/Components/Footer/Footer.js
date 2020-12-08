@@ -5,6 +5,7 @@ import bazzartext from '../../assets/images/bazzar text.svg';
 import sibapplogo from '../../assets/images/sib app logo.svg';
 import sibapptext from '../../assets/images/sib app text.svg';
 import Logo from '../Header/Logo/Logo';
+import {NavLink ,BrowserRouter} from 'react-router-dom';
 
 const Footer = (props) =>(
     <div>
@@ -36,38 +37,44 @@ const Footer = (props) =>(
                     </button>
                 </section>
             </div>
+            
             <div className={style.uls}>
                 <ul className={style.ul}>
                     <h4>صفحات درمانیتو</h4>
                     <li>
-                        <a href="#">تماس با ما</a>
+                        <NavLink className={style.active} to="/Contact_us" activeStyle={{
+                            color:"#1894ff"
+                        }}>تماس با ما</NavLink>
                     </li>
                     <li>
-                        <a href="#">درباره ما</a>
+                        <NavLink className={style.active} to="/FAQ" activeStyle={{
+                            color:"#1894ff"
+                        }}>درباره ما</NavLink>
                     </li>
                     <li>
-                        <a href="#">سوالات متداول</a>
+                        <NavLink to="/FAQ">سوالات متداول</NavLink>
                     </li>
                     <li>
-                        <a href="#">قوانین و شرایط</a>
+                    <NavLink to="">قوانین و شرایط</NavLink>
                     </li>
                 </ul>
                 <ul>
                     <h4>خدمات درمانیتو</h4>
                     <li>
-                        <a href="#">داروخانه آنلاین</a>
+                    <NavLink to="">داروخانه آنلاین</NavLink>
                     </li>
                     <li>
-                        <a href="#">فروشکاه آنلاین</a>
+                    <NavLink to="">فروشگاه آنلاین</NavLink>
                     </li>
                     <li>
-                        <a href="#">ویزیت آنلاین</a>
+                    <NavLink to="">ویزیت آنلاین</NavLink>
                     </li>
                     <li>
-                        <a href="#">پرونده پزشکی</a>
+                    <NavLink to="">پرونده پزشکی</NavLink>
                     </li>
                 </ul>
             </div>
+            
             <div className={style.links}>
                 <Logo />
                 <h4>سوپر اپلیکیشن حوزه درمان و سلامت</h4>

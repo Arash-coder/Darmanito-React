@@ -1,4 +1,8 @@
 @import '../../assets/styles/Defaults/Defaults.scss';
+.padding {
+    padding: 0rem 4rem;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -35,17 +39,17 @@
             width: 55%;
             padding: 1.5rem;
             border: none;
-            background-color: darkgray;
+            background-color: rgb(236, 236, 236);
             border-radius: 0px 7px 7px 0px;
             direction: rtl;
-            color: white;
+            color: black;
             font-size: 15px;
         }
         input:focus {
             outline: 0;
         }
         button {
-            background-color: darkgray;
+            background-color: rgb(236, 236, 236);
             border: none;
             border-radius: 7px 0px 0px 7px;
             display: flex;
