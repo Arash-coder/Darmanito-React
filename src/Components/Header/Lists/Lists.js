@@ -29,7 +29,7 @@ class Lists extends Component {
                     //         {key.name}
                     //     </NavLink>
                     // </li>
-                    <NavLink className={style.li} to={key.to} activeStyle={
+                    <NavLink exact className={style.li} to={key.to} activeStyle={
                         {
                             borderBottom: "2px solid #1894ff",
                             color: "#1894ff"

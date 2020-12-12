@@ -1,81 +1,60 @@
 import React, { Component } from 'react';
 import style from './Form.module.scss';
+import { useFormik } from 'formik'
 
-class Form extends Component{
-    constructor(props){
-        super(props)
-        this.state={
-            
-            name_value:true,
-            email_value:true,
-            main_value:true,
-            main_value2:true,
-            show1:false,
-            show2:false,
-            confirm:null
-        }
-    }
-    nameinputhandler=(value1)=>{
-        if(value1.target.value.length > 25){
-            this.setState({name_value:false})
-            this.setState({main_value:false})
-        }else{
-            this.setState({name_value:true})
-            this.setState({main_value:true})
-        }
-    }
-    emailinputhandler=(value2)=>{
-        if(value2.target.value.includes("@")){
-            this.setState({email_value:true})
-            this.setState({main_value2:true})
-        }else{
-            this.setState({email_value:false})
-            this.setState({main_value2:false})
-        }
-    }
-    confirm_btn_handler =(event)=>{
-        if((this.state.main_value)&&(this.state.main_value2)){
-            this.setState({confirm:true})
-            this.setState({show1:false})
-            this.setState({show2:false})
-        }
-        else{
-             if(!this.state.name_value){
-                this.setState({show1:true})
-            }else{
-                this.setState({show1:false})
+const Form = (props)=>{
+    const formik = useFormik({
+        initialValues:{
+            name:"",
+            email:"",
+            textarea:""
+        },
+        onSubmit: values=>{
+            console.log("data",values);
+        },
+        validate:values=>{
+            let errors ={
+
             }
-            if (!this.state.email_value){
-                this.setState({show2:true})
-            }else{
-                this.setState({show2:false})
+            if(!values.name){
+                errors.name = 'نام اجباری است'
             }
+            if(!values.email){
+                errors.email='ایمیل اجباری است'
+            }else if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i.test(values.email)){
+                errors.email='ایمیل وارد شده نامعتبر است'
+            }
+            if(!values.textarea){
+                errors.textarea='فیلد خالی است' 
+            }
+
+            return errors
         }
-        event.preventDefault();
-    }
-    render(){
-        return(
-            <div className={[this.props.className,style.main].join(' ')}>
-                <form>
+    })
+    console.log("formik errors",formik.errors)
+    return(
+        <div className={[props.className,style.main].join(' ')}>
+                <form onSubmit={formik.handleSubmit}>
                     <div className={style.title}>
                         <h4>نام و نام خانوادگی</h4>
-                        <h4 className={[style.err,this.state.show1?style.error:style.err].join(' ')}>لطفا نام و نام خانوادگی را درست وارد کنید!</h4>
+                        {formik.touched.name && formik.errors.name? <h4 className={style.err}>{formik.errors.name}</h4>:null}
                     </div>
-                    <input onChange={this.nameinputhandler}  className={[style.input,this.state.show1?style.err_input:style.input].join(' ')} type="text" placeholder="نام و نام خانوادگی"/>
+                    <input onBlur={formik.handleBlur}  className={style.input} type="text" placeholder="نام و نام خانوادگی" name="name" onChange={formik.handleChange} value={formik.values.name}   />
                     <div className={style.title}>
                         <h4>ایمیل</h4>
-                        <h4 className={[style.err,this.state.show2?style.error:style.err].join(' ')}>ایمیل وارد شده معتبر نمی باشد!</h4>
+                        {formik.touched.email && formik.errors.email? <h4 className={style.err}>{formik.errors.email}</h4>:null}
                     </div>
-                    <input onChange={this.emailinputhandler}   className={[style.input,this.state.show2?style.err_input:style.input].join(' ')} type="text" placeholder="ایمیل"/>
+                    <input onBlur={formik.handleBlur}     className={style.input} type="text" placeholder="ایمیل" onChange={formik.handleChange} name="email" value={formik.values.email}   />
                     <h4 className={style.title}>پیام شما</h4>
-                    <textarea className={style.textarea} placeholder="پیام شما"></textarea>
+                    {formik.touched.textarea && formik.errors.textarea? <h4 className={style.err}>{formik.errors.textarea}</h4>:null}
+                    <textarea onBlur={formik.handleBlur}  className={style.textarea} placeholder="پیام شما" name="textarea" onChange={formik.handleChange} value={formik.values.textarea}  ></textarea>
                     <div className={style.btn}>
-                    <button onClick={this.confirm_btn_handler}>ارسال پیام</button>
+                    <button  type="submit">ارسال پیام</button>
                     </div>
                 </form>
             </div>
-        );
-    }
+    );
 }
+        
 
 export default Form;

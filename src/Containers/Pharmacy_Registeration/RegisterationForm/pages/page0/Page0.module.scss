@@ -1,0 +1,144 @@
+@import '../../../../../assets/styles/Defaults/Defaults.scss';
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 15rem;
+    direction: rtl;
+    .title {
+        display: flex;
+        .err {
+            color: red;
+            margin-right: 1rem;
+        }
+        span {
+            color: $blue;
+        }
+    }
+    .input {
+        width: 85%;
+        margin-bottom: 1rem;
+        padding: 0.3rem;
+        border-radius: 7px;
+        border: 1px solid rgb(167, 167, 167);
+    }
+    .input:focus {
+        outline: 0;
+        border: 1px solid $blue;
+    }
+    .speci_item {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .speci_item1 {
+        display: none;
+    }
+    .input_speci {
+        width: 92.5%;
+        margin-bottom: 1rem;
+        padding: 0.3rem;
+        border-radius: 7px;
+        border: 1px solid rgb(167, 167, 167);
+    }
+    .input_speci:focus {
+        outline: 0;
+        border: 1px solid $blue;
+    }
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+}
+
+.center1 {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+    border: 1px solid $blue;
+    margin-right: 0.3rem;
+    border-radius: 7px;
+}
+
+.btn {
+    width: 30%;
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    background-color: $blue;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.file::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.file {
+    position: absolute;
+    cursor: pointer;
+}
+
+.file:focus {
+    outline: 0;
+}
+
+.upload {
+    color: $blue;
+    border: 1px solid $blue;
+    padding: 0.1rem;
+    // margin-top: 1rem;
+}
+
+.upload1 {
+    color: $blue;
+    border: 1px solid $blue;
+    padding: 0.1rem;
+    // margin-top: 1rem;
+    margin-right: 15rem;
+    cursor: pointer;
+    background-color: white;
+}
+
+.margin {
+    margin-top: 2rem;
+}
+
+// responsive
+@media(max-width:1214px) {
+    .upload1 {
+        margin-right: 7rem;
+    }
+}
+
+@media(max-width:1016px) {
+    .main {
+        padding: 1rem 7rem;
+    }
+}
+
+@media(max-width:770px) {
+    .main {
+        padding: 1rem 1rem;
+    }
+}
+
+@media(max-width:568px) {
+    .main {
+        grid-template-columns: 1fr;
+        .speci_item1 {
+            display: block;
+        }
+        .input_speci {
+            width: 85%;
+        }
+    }
+    .speci_item {
+        display: none;
+    }
+    .upload1 {
+        margin-right: 10rem;
+        display: inline-block;
+    }
+}

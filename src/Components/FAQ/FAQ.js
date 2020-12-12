@@ -68,9 +68,9 @@ const FAQ = (props) =>{
                     </div>
                 </div> */}
                 <Cart pic={ear} name="ویزیت آنلاین" />
-                <Cart pic={ear} name="فروشگاه آنلاین" />
-                <Cart pic={ear} name="داروخانه آنلاین" />
-                <Cart pic={ear} name="ویزیت آنلاین" />
+                <Cart pic={market} name="فروشگاه آنلاین" />
+                <Cart pic={pharmacy} name="داروخانه آنلاین" />
+                <Cart pic={schedule} name="ویزیت آنلاین" />
                 <Cart pic={ear} name="ویزیت آنلاین" />
                 </Slider>
             {/* </div> */}

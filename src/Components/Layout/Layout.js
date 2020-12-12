@@ -23,13 +23,11 @@ const Layout = (props) =>{
     }
     return(<Router >
         <Back className={show?style.back:null} />
-        <Modal onClick={()=>setshow(!show)} className={[style.main,show?style.active:null].join(' ')} />
+        <Modal onClick={()=>setshow((show)=>!show)} className={[style.main,show?style.active:null].join(' ')} />
         <Header />
     
             
-                <Route path="/Form">
-                    <Form clicked={()=>setshow(!show)} />
-                </Route>
+                <Route path='/Form' component={Form} />
                 {/* <Route path='/Confirm' component={Confirm} /> */}
 
             
