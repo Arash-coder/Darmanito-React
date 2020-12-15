@@ -7,7 +7,7 @@ const Page1 = (props) => {
         <main className={style.main} >
             <div className={style.flex}>
                 <div>
-                    <img src={props.pic} alt="image" />
+                    <img className={style.pic} src={props.formik.values.pic} alt="image" />
                 </div>
                 <div className={style.margin}>
                     <h4>نام داروخانه</h4>

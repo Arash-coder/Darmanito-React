@@ -9,6 +9,7 @@
 
 .flex {
     display: flex;
+    align-items: center;
 }
 
 .margin {
@@ -68,6 +69,18 @@
 .flex3 {
     display: flex;
     margin: 2rem 0rem;
+}
+
+.pic {
+    width: 115px;
+    height: 115px;
+    border-radius: 100px;
+}
+
+@media(max-width:1108px) {
+    .main {
+        padding-right: 10rem;
+    }
 }
 
 @media(max-width:1050px) {
