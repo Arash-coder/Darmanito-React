@@ -89,6 +89,24 @@
     border: 1px solid $blue;
     padding: 0.1rem;
     // margin-top: 1rem;
+    display: none;
+}
+
+.upload2 {
+    color: $blue;
+    border: 1px solid $blue;
+    padding: 0.1rem;
+    // margin-top: 1rem;
+    display: none;
+    cursor: pointer;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .upload1 {

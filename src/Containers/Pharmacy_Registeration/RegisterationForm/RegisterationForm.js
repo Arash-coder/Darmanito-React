@@ -20,7 +20,7 @@ const RegisterationForm = (props) => {
             address: "",
             from: "",
             to: "",
-            pic: null
+            pic: false
         },
         onSubmit: values => {
             console.log("data", values);

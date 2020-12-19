@@ -8,6 +8,20 @@ import pic2 from '../../assets/images/health.svg';
 
 
 class Pharmacy_Registeration extends Component {
+    state={
+        phonenum:null
+    }
+    valid=(event)=>{
+        if(isNaN(event.target.value)){
+            this.setState({phonenum:"لطفا عدد وارد کنید"})
+        }
+        else if(event.target.value.length > 11 || event.target.value.length < 11){
+            this.setState({phonenum:"لطفا شماره را درست وارد کنید"})
+        }
+        else{
+            this.setState({phonenum:null})
+        }
+    }
     render() {
         return (
             <main className={style.main}>
@@ -23,8 +37,9 @@ class Pharmacy_Registeration extends Component {
                             <h3 className={style.desc}>با ثبت نام به عنوان داروخانه یا فروشگاه و داروخانه شماهم به سیستم درمان کمک کنید و به هزاران کاربر خدمات ارئه بدین و روزانه درآمد سفارش های خودتون رو تسویه کنید</h3>
                             <div className={style.input_section}>
                                 <button className={style.btn_confirm}><p>ثبت نام سریع</p></button>
-                                <input placeholder="شماره همراه را وارد کنید" className={style.input} type="text"/>
+                                <input placeholder="شماره همراه را وارد کنید" className={style.input} type="text" onChange={this.valid}  />
                             </div>
+                            <p className={style.err}>{this.state.phonenum}</p>
                         </div>
                     </div>
                 </div>

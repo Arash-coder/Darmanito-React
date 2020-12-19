@@ -112,6 +112,13 @@
     }
 }
 
+.err {
+    color: red;
+    direction: rtl;
+    padding-right: 3rem;
+    padding-top: 2rem;
+}
+
 @media(max-width:1239px) {
     .labels {
         width: 113%;
