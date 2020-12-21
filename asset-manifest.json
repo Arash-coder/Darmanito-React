@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Darmanito-React/static/css/main.091c666e.chunk.css",
-    "main.js": "/Darmanito-React/static/js/main.7b3e35f6.chunk.js",
-    "main.js.map": "/Darmanito-React/static/js/main.7b3e35f6.chunk.js.map",
+    "main.css": "/Darmanito-React/static/css/main.cf67133d.chunk.css",
+    "main.js": "/Darmanito-React/static/js/main.2073d1de.chunk.js",
+    "main.js.map": "/Darmanito-React/static/js/main.2073d1de.chunk.js.map",
     "runtime-main.js": "/Darmanito-React/static/js/runtime-main.7ef1da53.js",
     "runtime-main.js.map": "/Darmanito-React/static/js/runtime-main.7ef1da53.js.map",
     "static/css/2.48f40d69.chunk.css": "/Darmanito-React/static/css/2.48f40d69.chunk.css",
-    "static/js/2.20026a19.chunk.js": "/Darmanito-React/static/js/2.20026a19.chunk.js",
-    "static/js/2.20026a19.chunk.js.map": "/Darmanito-React/static/js/2.20026a19.chunk.js.map",
+    "static/js/2.f3e6315c.chunk.js": "/Darmanito-React/static/js/2.f3e6315c.chunk.js",
+    "static/js/2.f3e6315c.chunk.js.map": "/Darmanito-React/static/js/2.f3e6315c.chunk.js.map",
     "static/js/3.b121550b.chunk.js": "/Darmanito-React/static/js/3.b121550b.chunk.js",
     "static/js/3.b121550b.chunk.js.map": "/Darmanito-React/static/js/3.b121550b.chunk.js.map",
     "index.html": "/Darmanito-React/index.html",
     "static/css/2.48f40d69.chunk.css.map": "/Darmanito-React/static/css/2.48f40d69.chunk.css.map",
-    "static/css/main.091c666e.chunk.css.map": "/Darmanito-React/static/css/main.091c666e.chunk.css.map",
-    "static/js/2.20026a19.chunk.js.LICENSE.txt": "/Darmanito-React/static/js/2.20026a19.chunk.js.LICENSE.txt",
+    "static/css/main.cf67133d.chunk.css.map": "/Darmanito-React/static/css/main.cf67133d.chunk.css.map",
+    "static/js/2.f3e6315c.chunk.js.LICENSE.txt": "/Darmanito-React/static/js/2.f3e6315c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Darmanito-React/static/media/Yekan.012789e6.ttf",
     "static/media/about.f1fbde4c.PNG": "/Darmanito-React/static/media/about.f1fbde4c.PNG",
     "static/media/android.16424ac0.svg": "/Darmanito-React/static/media/android.16424ac0.svg",
@@ -40,8 +40,8 @@
   "entrypoints": [
     "static/js/runtime-main.7ef1da53.js",
     "static/css/2.48f40d69.chunk.css",
-    "static/js/2.20026a19.chunk.js",
-    "static/css/main.091c666e.chunk.css",
-    "static/js/main.7b3e35f6.chunk.js"
+    "static/js/2.f3e6315c.chunk.js",
+    "static/css/main.cf67133d.chunk.css",
+    "static/js/main.2073d1de.chunk.js"
   ]
 }
